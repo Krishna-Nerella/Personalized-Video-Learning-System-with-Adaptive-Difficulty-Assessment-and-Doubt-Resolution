@@ -25,7 +25,7 @@ st.set_page_config(
 
 def configure_gemini():
     """Configure Gemini API"""
-    api_key = "AIzaSyDsxNln7Fa9aZKlnCYXZKoS5jc_r-Uu5L0"
+    api_key = "API_KEY"
     genai.configure(api_key=api_key)
     return True
 def get_supported_languages():
