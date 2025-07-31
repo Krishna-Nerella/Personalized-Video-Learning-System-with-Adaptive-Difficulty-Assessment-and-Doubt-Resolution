@@ -15,6 +15,8 @@ from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 import markdown
 import re
+from auth import check_authentication, show_logout_option
+from database import log_ui_interaction, update_ui_interaction
 
 # Configure page
 st.set_page_config(
@@ -40,7 +42,7 @@ def get_supported_languages():
 def translate_text(text, target_language):
     """Translate text to target language using Gemini"""
     if target_language == "en":
-        return text  # No translation needed for English
+        return text  
     
     try:
         model = genai.GenerativeModel('gemini-2.0-flash')
@@ -513,8 +515,7 @@ def create_pdf_from_content(content, filename="personalized_course_guide.pdf"):
         buffer = io.BytesIO()
         doc = SimpleDocTemplate(buffer, pagesize=letter)
         styles = getSampleStyleSheet()
-        
-        # Create custom styles
+
         title_style = ParagraphStyle(
             'CustomTitle',
             parent=styles['Heading1'],
@@ -583,8 +584,8 @@ def create_pdf_from_content(content, filename="personalized_course_guide.pdf"):
         return None
 def clean_json_string(raw_text):
     cleaned = raw_text.strip()
-    cleaned = re.sub(r"```json|```", "", cleaned)  # Remove code block markers
-    cleaned = cleaned.replace("“", '"').replace("”", '"')  # Convert smart quotes to normal
+    cleaned = re.sub(r"```json|```", "", cleaned)  
+    cleaned = cleaned.replace("“", '"').replace("”", '"')  
     cleaned = cleaned.replace("‘", "'").replace("’", "'")
     return cleaned
 
@@ -672,11 +673,19 @@ def answer_doubt(question, document_text):
         return None
 
 def main():
+    # Check authentication first
+    check_authentication()
+    
+    st.title("📚 Student Document Analyzer with AI")
+    st.markdown(f"Welcome back, **{st.session_state.user_email}**! Upload academic documents to get started.")
+    configure_gemini()
     st.title("📚 Student Document Analyzer with AI")
     st.markdown("Upload academic documents")
-    
     # Configure Gemini API
     configure_gemini()
+
+    if 'user_email' not in st.session_state:
+        st.session_state.user_email = ""
     
     # Initialize session state
     if 'analysis_completed' not in st.session_state:
@@ -864,6 +873,16 @@ def main():
                         if analysis:
                             st.session_state.analysis_result = analysis
                             st.session_state.analysis_completed = True
+                            
+                            # Log the interaction to database
+                            log_ui_interaction(
+                                user_email=st.session_state.user_email,
+                                document_name=uploaded_file.name,
+                                file_type=file_type,
+                                file_size=uploaded_file.size,
+                                language_used=st.session_state.selected_language
+                            )
+                            
                             st.success("✅ Analysis completed successfully!")
                             st.rerun()
                         else:
@@ -890,6 +909,7 @@ def main():
                     with st.spinner("🤔 Thinking about your question..."):
                         answer = answer_doubt(student_question, st.session_state.document_text)
                         if answer:
+                            update_ui_interaction(st.session_state.user_email, doubt_sessions=1)
                             st.markdown("### 📚 Professor's Response:")
                             translated_answer = display_translated_content(answer)
                             st.markdown(translated_answer)
@@ -998,7 +1018,12 @@ def main():
                             "percentage": percentage,
                             "level": performance_level
                         }
-        
+                        update_ui_interaction(
+                            st.session_state.user_email, 
+                            assessments_taken=1,
+                            quiz_score=f"{score}/{total} ({percentage:.0f}%)"
+                        )
+                                
         # VIDEO SCRIPT VIEW
         elif st.session_state.show_video_script:
             st.header("🎬 Educational Video Script")
@@ -1009,6 +1034,7 @@ def main():
                     script = generate_video_script(st.session_state.document_text)
                     if script:
                         st.session_state.video_script = script
+                        update_ui_interaction(st.session_state.user_email, video_scripts_generated=1)
                     else:
                         st.error("❌ Failed to generate video script. Please try again.")
             
@@ -1078,6 +1104,7 @@ def main():
                         
                         if pdf_bytes:
                             st.success("✅ Your personalized PDF has been generated!")
+                            update_ui_interaction(st.session_state.user_email, pdfs_generated=1)
                             
                             # Download button
                             st.download_button(
