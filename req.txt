@@ -6,3 +6,29 @@ Pillow
 reportlab
 markdown
 psycopg2-binary
+
+
+CREATE TABLE login (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    no_of_time_logged_in INTEGER DEFAULT 0,
+    latest_login_time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE ui_interactions (
+    s_no SERIAL PRIMARY KEY,
+    user_email VARCHAR(255) REFERENCES login(email),
+    document_name VARCHAR(255),
+    file_type VARCHAR(50),
+    file_size INTEGER,
+    analysis_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    language_used VARCHAR(50),
+    doubt_sessions INTEGER DEFAULT 0,
+    assessments_taken INTEGER DEFAULT 0,
+    quiz_score VARCHAR(50),
+    video_scripts_generated INTEGER DEFAULT 0,
+    pdfs_generated INTEGER DEFAULT 0
+);
