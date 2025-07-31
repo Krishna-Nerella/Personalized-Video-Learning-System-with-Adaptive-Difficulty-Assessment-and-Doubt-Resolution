@@ -8,7 +8,7 @@ DB_CONFIG = {
     'host': 'localhost',
     'database': 'AI',
     'user': 'postgres',
-    'password': 'PASSWORD',
+    'password': '123456',
     'port': '5432'
 }
 
