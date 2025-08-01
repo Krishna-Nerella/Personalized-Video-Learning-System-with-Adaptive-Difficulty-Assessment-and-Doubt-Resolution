@@ -81,47 +81,59 @@ def get_ui_translations():
     return {
         "en": {
             "upload_header": "📄 Upload Your Document",
-            "analysis_button": "🔍 Generate Student-Friendly Analysis",
+            "analysis_button": "🔍 Generate Multi-Level Analysis",
             "doubt_session": "🤔 Doubt Session",
             "assessment": "📝 Assessment",
             "video_script": "🎬 Video Script",
             "conclusion": "🎯 Conclusion",
             "personalized_pdf": "📄 Personalized Course PDF",
-            "view_analysis": "📖 View Analysis",
-            "new_analysis": "🔄 New Analysis"
+            "view_analysis": "📖 View Multi-Level Analysis",
+            "new_analysis": "🔄 New Analysis",
+            "easy_level": "⭐⭐ Easy Level (2.5/5)",
+            "medium_level": "⭐⭐⭐⭐ Medium Level (3.5/5)",
+            "hard_level": "⭐⭐⭐⭐⭐ Hard Level (4+/5)"
         },
         "te": {
             "upload_header": "📄 మీ పత్రాన్ని అప్‌లోడ్ చేయండి",
-            "analysis_button": "🔍 విద్యార్థి-అనుకూల విశ్లేషణ రూపొందించండి",
+            "analysis_button": "🔍 బహుళ-స్థాయి విశ్లేషణ రూపొందించండి",
             "doubt_session": "🤔 సందేహాల సెషన్",
             "assessment": "📝 మూల్యాంకనం",
             "video_script": "🎬 వీడియో స్క్రిప్ట్",
             "conclusion": "🎯 ముగింపు",
             "personalized_pdf": "📄 వ్యక్తిగతీకరించిన కోర్సు PDF",
-            "view_analysis": "📖 విశ్లేషణ చూడండి",
-            "new_analysis": "🔄 కొత్త విశ్లేషణ"
+            "view_analysis": "📖 బహుళ-స్థాయి విశ్లేషణ చూడండి",
+            "new_analysis": "🔄 కొత్త విశ్లేషణ",
+            "easy_level": "⭐⭐ సులభ స్థాయి (2.5/5)",
+            "medium_level": "⭐⭐⭐⭐ మధ్యమ స్థాయి (3.5/5)",
+            "hard_level": "⭐⭐⭐⭐⭐ కష్ట స్థాయి (4+/5)"
         },
         "hi": {
             "upload_header": "📄 अपना दस्तावेज़ अपलोड करें",
-            "analysis_button": "🔍 छात्र-अनुकूल विश्लेषण बनाएं",
+            "analysis_button": "🔍 बहु-स्तरीय विश्लेषण बनाएं",
             "doubt_session": "🤔 संदेह सत्र",
             "assessment": "📝 मूल्यांकन",
             "video_script": "🎬 वीडियो स्क्रिप्ट",
             "conclusion": "🎯 निष्कर्ष",
             "personalized_pdf": "📄 व्यक्तिगत कोर्स PDF",
-            "view_analysis": "📖 विश्लेषण देखें",
-            "new_analysis": "🔄 नया विश्लेषण"
+            "view_analysis": "📖 बहु-स्तरीय विश्लेषण देखें",
+            "new_analysis": "🔄 नया विश्लेषण",
+            "easy_level": "⭐⭐ आसान स्तर (2.5/5)",
+            "medium_level": "⭐⭐⭐⭐ मध्यम स्तर (3.5/5)",
+            "hard_level": "⭐⭐⭐⭐⭐ कठिन स्तर (4+/5)"
         },
         "kn": {
             "upload_header": "📄 ನಿಮ್ಮ ದಾಖಲೆಯನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
-            "analysis_button": "🔍 ವಿದ್ಯಾರ್ಥಿ-ಸ್ನೇಹಿ ವಿಶ್ಲೇಷಣೆಯನ್ನು ರಚಿಸಿ",
+            "analysis_button": "🔍 ಬಹು-ಹಂತದ ವಿಶ್ಲೇಷಣೆಯನ್ನು ರಚಿಸಿ",
             "doubt_session": "🤔 ಸಂದೇಹ ಸೆಷನ್",
             "assessment": "📝 ಮೌಲ್ಯಮಾಪನ",
             "video_script": "🎬 ವೀಡಿಯೋ ಸ್ಕ್ರಿಪ್ಟ್",
             "conclusion": "🎯 ಸಮಾಪನೆ",
             "personalized_pdf": "📄 ವೈಯಕ್ತಿಕಗೊಳಿಸಿದ ಕೋರ್ಸ್ PDF",
-            "view_analysis": "📖 ವಿಶ್ಲೇಷಣೆಯನ್ನು ವೀಕ್ಷಿಸಿ",
-            "new_analysis": "🔄 ಹೊಸ ವಿಶ್ಲೇಷಣೆ"
+            "view_analysis": "📖 ಬಹು-ಹಂತದ ವಿಶ್ಲೇಷಣೆಯನ್ನು ವೀಕ್ಷಿಸಿ",
+            "new_analysis": "🔄 ಹೊಸ ವಿಶ್ಲೇಷಣೆ",
+            "easy_level": "⭐⭐ ಸುಲಭ ಹಂತ (2.5/5)",
+            "medium_level": "⭐⭐⭐⭐ ಮಧ್ಯಮ ಹಂತ (3.5/5)",
+            "hard_level": "⭐⭐⭐⭐⭐ ಕಠಿಣ ಹಂತ (4+/5)"
         }
     }
 
@@ -169,72 +181,128 @@ def extract_text_from_ppt(uploaded_file):
         return None
 
 def analyze_with_gemini(text, file_type):
-    """Analyze text using Gemini API with student-focused approach"""
+    """Analyze text using Gemini API with student-focused approach - Three difficulty levels"""
     try:
         model = genai.GenerativeModel('gemini-2.0-flash')
         
         prompt = f"""
-        You are a caring, experienced professor who excels at making complex topics simple and engaging for students. Your goal is to transform this {file_type} content into a comprehensive learning experience that any student can easily understand.
-
-        Think of yourself as the best teacher your students have ever had - one who uses analogies, real-world examples, and step-by-step explanations to make everything crystal clear.
+        You are a caring, experienced professor who excels at making complex topics accessible to students at different learning levels. Your goal is to transform this {file_type} content into a comprehensive learning experience with THREE different difficulty levels.
 
         Create your response in this EXACT format:
 
         ## 📚 **Introduction**
         
         **🎯 What This Document Is About:**
-        [Write as if you're sitting with a student and explaining: "Imagine you're learning about..." Start with simple language, use analogies from everyday life, and make it relatable. Think of how you'd explain this to a friend over coffee.]
+        [Write a brief, engaging overview that works for all levels. Use simple language and relatable analogies.]
 
         **🌍 Real-World Relevance:**
-        [Share exciting real-world examples: "You know how when you use your smartphone/Netflix/Amazon...?" Connect to things students experience daily. Show them why this matters in their future career and life.]
+        [Share exciting real-world examples that connect to students' daily experiences.]
 
-        **🔑 Key Learning Objectives:**
-        [Frame as: "By the end of this, you'll be able to..." List 3-4 concrete skills or knowledge they'll gain, written in encouraging, achievable language.]
+        **🔑 Learning Path Overview:**
+        [Explain that content is organized by difficulty levels to help students progress at their own pace.]
 
         ---
 
-        ## 📖 **Main Content** 
+        ## 📖 **EASY LEVEL** ⭐⭐ (2.5/5 stars)
+        *Perfect for beginners and those new to this topic*
 
-        ### 📚 **1. Theoretical Explanation** 
+        ### 📚 **Basic Understanding** 
+        **🔤 Simple Concepts:**
+        [Start from absolute basics. Use everyday analogies like "Think of it like ordering food on an app..." Define technical terms in the simplest possible way. Use short sentences and familiar examples.]
+
+        **📖 Fundamental Ideas:**
+        [Explain the core concepts as if talking to a middle school student. Use lots of analogies from daily life. Break everything into small, digestible pieces.]
+
+        ### 🎨 **Visual Learning** 
+        **📊 Simple Diagrams:**
+        [Describe basic visual representations that are easy to understand. Focus on simple flowcharts and basic connections between concepts.]
+
+        **🔄 Step-by-Step Process:**
+        [Break down processes into 3-4 simple steps maximum. Use clear, sequential language like "First... Then... Finally..."]
+
+        ### 💡 **Easy Examples** 
+        **🌍 Everyday Examples:**
+        [Use examples from social media, food delivery, shopping, or other familiar activities. Keep explanations short and sweet.]
+
+        **🎯 Basic Applications:**
+        [Show how this knowledge applies to simple, everyday situations that students can easily relate to.]
+
+        ---
+
+        ## 📖 **MEDIUM LEVEL** ⭐⭐⭐⭐ (3.5/5 stars)
+        *For students with some background knowledge*
+
+        ### 📚 **Detailed Explanation** 
         **🔤 Core Concepts & Definitions:**
-        [Start from absolute basics - assume the student knows nothing about this topic. Use the "building blocks" approach: "First, let's understand what X means. Think of it like..." Use everyday analogies and metaphors. Define technical terms in simple language first, then gradually build complexity.]
+        [Build on the basics with more technical detail. Introduce proper terminology while still using analogies. Connect concepts to show relationships.]
 
         **📖 Key Principles:**
-        [Explain the "why" behind everything. Use phrases like "The reason this works is..." or "Think of it this way..." Break down complex principles into simple cause-and-effect relationships that students can visualize.]
+        [Explain the "why" behind concepts. Use more sophisticated examples and show cause-and-effect relationships. Include some technical details.]
+
+        ### 🎨 **Comprehensive Visuals** 
+        **📊 Detailed Diagrams:**
+        [Describe more complex visual representations. Include flowcharts with multiple branches, detailed process diagrams, and conceptual frameworks.]
+
+        **🔄 Complete Process Flow:**
+        [Walk through processes with 5-7 steps, showing interconnections. Explain decision points and alternative paths.]
+
+        ### 💡 **Practical Examples** 
+        **🌍 Real-World Applications:**
+        [Use examples from various industries and professional contexts. Show how concepts apply in different scenarios.]
+
+        **🔧 Problem-Solving Approach:**
+        [Present structured problem-solving methods. Show multiple ways to approach challenges.]
+
+        **❓ Common Questions:**
+        [Address typical student concerns and misconceptions at this level.]
 
         ---
 
-        ### 🎨 **2. Graphical/Visual Explanation** 
-        **📊 Visual Representation:**
-        [Describe detailed visual explanations as if you're drawing on a whiteboard for students. Use phrases like "Picture this diagram..." or "Imagine a flowchart that shows..." Create vivid mental images with step-by-step visual descriptions. If generating images, describe exactly what each diagram should contain and why it helps understanding.]
+        ## 📖 **HARD LEVEL** ⭐⭐⭐⭐⭐ (4+ /5 stars)
+        *For advanced students and those seeking mastery*
 
-        **🔄 Process Flow:**
-        [Walk through processes like you're giving a guided tour: "First this happens, then that, and here's why..." Use sequential language and connect each step clearly to the next. Create easy-to-follow mental maps.]
+        ### 📚 **Advanced Analysis** 
+        **🔤 Complex Concepts:**
+        [Dive deep into sophisticated aspects. Use technical terminology appropriately. Discuss theoretical foundations and advanced principles.]
+
+        **📖 Advanced Principles:**
+        [Explore complex relationships, edge cases, and advanced applications. Discuss current research and emerging trends.]
+
+        ### 🎨 **Sophisticated Modeling** 
+        **📊 Complex Visualizations:**
+        [Describe advanced diagrams, multi-dimensional models, and sophisticated frameworks. Include system-level thinking and integration concepts.]
+
+        **🔄 Comprehensive Workflows:**
+        [Present complete, real-world workflows with multiple decision points, feedback loops, and optimization considerations.]
+
+        ### 💡 **Expert-Level Applications** 
+        **🌍 Industry Case Studies:**
+        [Provide detailed case studies from cutting-edge applications. Discuss challenges faced by professionals in the field.]
+
+        **🔧 Advanced Problem-Solving:**
+        [Present complex scenarios requiring synthesis of multiple concepts. Show how experts approach sophisticated challenges.]
+
+        **❓ Research and Innovation:**
+        [Discuss current research directions, unresolved questions, and opportunities for innovation.]
+
+        **🎯 Professional Development:**
+        [Connect to advanced career paths, specializations, and leadership roles in the field.]
 
         ---
 
-        ### 💡 **3. Q&A / Example-Based Explanation** 
-        **🌍 Real-World Examples:**
-        [Share multiple concrete examples that students can relate to: "Let's say you're ordering food on an app..." or "When you're streaming a video..." Make examples diverse and relevant to different student backgrounds.]
+        ## 🎓 **Learning Progression Guide**
+        **📈 How to Use These Levels:**
+        - Start with EASY if you're new to this topic
+        - Move to MEDIUM when basic concepts feel comfortable
+        - Tackle HARD level when you want professional-level understanding
+        - Feel free to jump between levels for different concepts
 
-        **🔧 Problem-Solving Steps:**
-        [Present as "Let's solve this together" approach. Break down problems into bite-sized steps: "Step 1: First, we need to... Step 2: Next, we..." Explain the reasoning behind each step.]
+        **💡 Study Tips for Each Level:**
+        - EASY: Focus on understanding, use lots of examples
+        - MEDIUM: Practice applications, connect concepts
+        - HARD: Synthesize knowledge, think critically
 
-        **❓ Interactive Q&A:**
-        [Anticipate student confusion with phrases like "You might be wondering..." or "A common question is..." Answer in conversational, reassuring tone. Address the "why" behind everything.]
-
-        **🎯 Practical Applications:**
-        [Show concrete career applications: "In your future job as a [role], you'll use this when..." Connect to internships, projects, and real workplace scenarios.]
-
-        ---
-
-        **📝 Study Tips:**
-        - Start with the theoretical explanation - don't skip the basics, they're your foundation!
-        - Draw or visualize the concepts yourself - even rough sketches help memory
-        - Try explaining the examples to a friend - if you can teach it, you understand it
-        - Connect everything back to your own experiences and interests
-
-        IMPORTANT: Write everything in a warm, encouraging, professorial tone. Use "you" frequently to address the student directly. Make it feel like a one-on-one tutoring session with the world's most patient, knowledgeable teacher.
+        IMPORTANT: Write in an encouraging, professorial tone. Make each level feel achievable while building toward mastery. Use appropriate complexity for each level while maintaining engaging, clear explanations.
 
         Content to analyze:
         {text}
@@ -245,7 +313,7 @@ def analyze_with_gemini(text, file_type):
     except Exception as e:
         st.error(f"Error with Gemini API: {str(e)}")
         return None
-
+    
 def generate_video_script(document_text):
     """Generate engaging video script based on document content"""
     try:
