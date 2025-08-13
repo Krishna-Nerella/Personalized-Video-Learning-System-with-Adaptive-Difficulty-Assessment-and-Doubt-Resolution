@@ -421,4 +421,30 @@ Keep technical terms in their original form if they don't have direct translatio
 
 Text to translate:
 {text}
+
+"""
+
+
+IMAGE_PROMPT_GENERATION_PROMPT = """
+You are an expert at creating detailed image prompts for DALL-E to generate educational illustrations.
+
+Given the following content and context, create a detailed, specific prompt for DALL-E that will generate an educational illustration that helps visualize and explain the concept.
+
+Content: {content}
+Context: {context}
+
+Requirements for the image prompt:
+1. Be specific and detailed about the visual elements needed
+2. Focus on educational value and clarity
+3. Specify style (e.g., "educational illustration", "scientific diagram", "infographic style")
+4. Include relevant colors, composition, and visual hierarchy
+5. Avoid text in the image (since DALL-E doesn't handle text well)
+6. Make it visually appealing and professional
+7. Ensure it's suitable for an academic/educational context
+
+Examples of good prompts:
+- "A detailed scientific diagram showing the process of photosynthesis, with a cross-section of a leaf showing chloroplasts, sunlight rays, CO2 molecules entering, and O2 molecules being released, in a clean educational illustration style with labeled components using arrows and clear visual flow"
+- "An infographic-style illustration of the water cycle, showing evaporation from oceans, cloud formation, precipitation, and water flowing back to rivers and lakes, with a bright blue color scheme and clear visual connections between each stage"
+
+Generate ONE detailed prompt (maximum 200 words) that will create the most helpful educational illustration for the given content:
 """
